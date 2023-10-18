@@ -17,6 +17,9 @@
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
+.logo.ts:hover {
+  filter: drop-shadow(0 0 2em #1f72ca);
+}
 
 @keyframes logo-spin {
   from {
@@ -27,8 +30,55 @@
   }
 }
 
+.input-group {
+  display: flex;
+  gap: 10px;
+  align-items: flex-end
+}
+
+.balance {
+  margin-top: 40px;
+  user-select: none;
+}
+.balance-group {
+  justify-content: center;
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+  align-items: flex-end
+}
+
+.net-group {
+  display: flex;
+  justify-content: center;
+}
+
+.net-group > input, .net-group > label {
+  cursor: pointer;
+}
+
+.net-radio {
+  font-size: 1.5em;
+}
+
+.net-label {
+  margin: 0px 30px 0px 5px;
+}
+
+.get-private-key-btn {
+  font-size: 19px !important;
+}
+
+.get-private-key-btn[disabled] {
+  border: none;
+}
+
+input {
+  font-size: 40px;
+}
+
 @media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
+  a .logo {
     animation: logo-spin infinite 20s linear;
   }
 }

@@ -10,6 +10,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@solana-developers/node-helpers": "^1.0.4",
+    "@solana/web3.js": "^1.87.1",
+    "bs58": "^5.0.0",
+    "dotenv": "^16.3.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
