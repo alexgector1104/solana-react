@@ -11,14 +11,20 @@
   will-change: filter;
   transition: filter 300ms;
 }
+
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
+
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
+
 .logo.ts:hover {
   filter: drop-shadow(0 0 2em #1f72ca);
+}
+.logo.wallet:hover {
+  filter: drop-shadow(0 0 2em #486380);
 }
 
 @keyframes logo-spin {
@@ -40,6 +46,7 @@
   margin-top: 40px;
   user-select: none;
 }
+
 .balance-group {
   justify-content: center;
   margin-top: 20px;
