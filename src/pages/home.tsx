@@ -6,8 +6,9 @@ import viteLogo from '../assets/vite.svg'
 import solanaLogo from '../assets/logo.svg'
 import tsLogo from '../assets/ts.png'
 import wallet from '../assets/wallet.png'
-import { useNavigate } from 'react-router-dom';
-// import './App.css'
+
+import Wallet from './wallet'
+// import { useNavigate } from 'react-router-dom';
 
 const Home = () => {
 
@@ -16,7 +17,7 @@ const Home = () => {
   const [balance, setBalance] = useState<string | number>(0)
   const [net, setNet] = useState<"devnet" | "testnet" | "mainnet-beta">("testnet")
   const [link, setLink] = useState<string>("")
-  const navigate = useNavigate()
+  // const navigate = useNavigate()
 
   useEffect (()=> {
     setLink(window.location.origin)
@@ -74,11 +75,11 @@ const Home = () => {
       </div>
       <div className="balance">
         <div className="net-group">
-          <input type="radio" className='net-radio' name="net" id="main" onChange={() => { setNet("mainnet-beta"); console.log("mainnet-beta") }} />
+          <input type="radio" className='net-radio' name="net" id="main" onChange={() => { setNet("mainnet-beta"); }} />
           <label className='net net-label' htmlFor="main">Mainnet</label>
-          <input type="radio" className='net-radio' name="net" id="test" onChange={() => { setNet("testnet"); console.log("testnet") }} />
+          <input type="radio" className='net-radio' name="net" id="test" onChange={() => { setNet("testnet");}} />
           <label className='net net-label' htmlFor="test">Testnet</label>
-          <input type="radio" className='net-radio' name="net" id="dev" onChange={() => { setNet("devnet"); console.log("devnet") }} />
+          <input type="radio" className='net-radio' name="net" id="dev" onChange={() => { setNet("devnet"); }} />
           <label className='net net-label' htmlFor="dev">Devnet</label>
 
         </div>
@@ -87,6 +88,7 @@ const Home = () => {
           <input type="text" value={balance} disabled={publicKey && publicKey != "Invalid private key" ? false : true} readOnly />
         </div>
       </div>
+      <Wallet/>
     </>
   )
 }
